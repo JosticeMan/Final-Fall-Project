@@ -1,0 +1,70 @@
+
+img#crate, img#throwball
+{
+	width: 40%;
+	padding-top: 50px;
+	padding-left: 30%;
+}
+
+b.spec
+{
+	text-decoration: none;
+}
+
+table.ctable
+{
+	margin: auto;
+	border: 2px solid yellow;
+	background-color: black;
+	color: white;
+	font: 14pt Arial;
+}
+
+table.ctable, table.ctable th, table.ctable td
+{
+	border-collapse: collapse;
+}
+
+
+table.ctable tr:first-child
+{
+    background-color: darkblue;
+}
+
+table.ctable th, table.ctable td
+{
+	padding: 5px;
+	border: 1px solid yellow;
+}
+
+table.ctable td
+{
+	text-align: center;
+}
+
+img
+{
+	width: 50%;
+}
+
+div#set
+{
+	text-align: center;
+}
+
+div.divspec
+{
+	border: 2px solid yellow;
+	background-color: black;
+	color: white;
+	text-align: center;
+	width: 40%;
+	margin-left: 50px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+div.just
+{
+	text-align: justify;
+}

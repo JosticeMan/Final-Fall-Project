@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- Creator: Justin Yau  -->
+<html>
+
+	<head>
+		<title> Pokemon Infoo - Trainers</title>
+		
+		<link rel = "stylesheet" href = "../styles/pkmgo.css" />		
+		<link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="https://boost-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/PokeBall.png" />
+		
+		<link rel = "stylesheet" href = "../styles/game.css" />
+		<link rel = "stylesheet" href = "../styles/trainer.css" />
+		
+		<style> 
+		
+		</style>
+
+		<script>
+		
+			function initialize() 
+			{
+				
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize();">
+
+		<img src = "../images/bgrnd.jpg" id = "bgrnd" />
+		
+		<div id = "alert">
+			<marquee id = "amsg" DIRECTION=RIGHT > Welcome to Pokemon Go Infoo! </marquee>	
+		</div>
+		
+		<div id = "logodiv">
+			<img src = "../images/logo.png" id = "logo" />
+		</div>
+		
+		<div class = "menu">
+			<ul>
+				<!-- Home Icon -->
+				<li>
+					<a href = "../index.html" class = "menusec"> 
+						<i class="fa fa-home"></i>
+					</a>
+				</li>
+				<!-- Game Info -->
+				<li> 
+					GAME INFO
+					<ul>
+						<li> 
+							<a href="beginning.html" class = "menusec">Beginning</a>
+						</li>
+						<li>
+							<a href="gym.html" class = "menusec">Gyms</a>
+						</li>
+						<li>
+							<a href="pstop.html" class = "menusec">Pokestops</a>
+						</li>
+						<li id = "special">
+							<a href ="trainer.html" class = "menusec">Trainers</a>
+						</li>
+					</ul>
+				</li>
+				<!-- POKEMON INFO -->
+				<li> 
+					POKEMON
+					<ul>
+						<li>
+							<a href = "appraisal.html" class = "menusec"> Appraisal </a>
+						</li>
+						<li>
+							<a href = "pokedex.html" class = "menusec"> Pokedex </a>
+						</li> 
+						<li>
+							<a href = "mcp.html" class = "menusec">Max CP</a>
+						</li>
+						<li>
+							<a href="crate.html" class = "menusec">Catch Rates</a>
+						</li>
+						<li> 
+							<a href = "egg.html" class = "menusec">Eggs</a>
+						</li> 
+						<li>
+							<a href = "tracker.html" class = "menusec">Tracker</a>
+						</li>
+					</ul>
+				</li> 
+			</ul>
+		</div>
+		
+		<img src = "../images/trainer.jpg" id = "trainer" />
+		
+		<div id = "bg">
+			<p class = "infohead">
+				Trainers
+			</p>
+		</div>
+			
+		<div id = "bg">
+			<p class = "info">
+				Pokémon Go isn't just about taking care of and leveling your Pokémon — it's about your experience, too. You can gain levels as a trainer by catching Pokémon, exploring PokéStops, and battling at Gyms. <br />
+				<br />
+				As you hit higher levels, you'll be able to fight at gyms, gain access to higher-quality PokéBalls and other items, and help strengthen your Pokémon. <br />
+				<br />
+				If you have a higher trainer level than the players at a rival Gym, you've got a better chance of taking it over. This is especially true when it comes to fighting multiple trainers to take over a single Gym. <br />
+				<br />
+				When you train at a Gym, you'll be able to bring six Pokémon with you into the battle. If your Pokémon are lower level than your friendly opponent, its' combat points will be temporarily be reduced so you have a fairer competition and can actually earn some Prestige Points for your Gym.	<br />	
+			</p>
+		</div>
+		
+		<div id = "bg">
+			<p class = "infohead">
+				Experience Chart:
+			</p>
+		</div>
+	
+		<table id = "xptable"> 
+			<tr> 
+				<th> Level </th>
+				<th> Experience </th>
+				<th> Reward </th>
+			</tr>
+			<tr>
+				<td> 1 </td>
+				<td> 0 </td>
+				<td> Nothing </td>
+			</tr>
+			<tr>
+				<td> 2 </td>
+				<td> 1000 </td>
+				<td> 10x Pokeballs </td>
+			</tr>
+			<tr>
+				<td> 3 </td>
+				<td> 2000 </td>
+				<td> 15x Pokeballs </td>
+			</tr>
+			<tr>
+				<td> 4 </td>
+				<td> 3000 </td>
+				<td> 15x Pokeballs </td>
+			</tr>
+			<tr>
+				<td> 5 </td>
+				<td> 4000 </td>
+				<td> 20x Pokeballs 10x Potions 10x Revives 1x Incense </td>
+			</tr>
+			<tr>
+				<td> 6 </td>
+				<td> 5000 </td>
+				<td> 15x Pokeballs 10x Potions 10x Revives 1x Incubator </td>
+			</tr>
+			<tr>
+				<td> 7 </td>
+				<td> 6000 </td>
+				<td> 15x Pokeballs 10x Potions 10x Revives 1x Incense </td>
+			</tr>
+			<tr>
+				<td> 8 </td>
+				<td> 7000 </td>
+				<td> 15x Pokeballs 10x Potions 5x Revives 10x Razberries 1x Lure </td>
+			</tr>
+			<tr>
+				<td> 9 </td>
+				<td> 8000 </td>
+				<td> 15x Pokeballs 10x Potions 5x Revives 3x Razberries 1x Lucky Egg </td>
+			</tr>
+			<tr>
+				<td> 10 </td>
+				<td> 9000 </td>
+				<td> 20x Pokeballs 20x Potions 10x Revives 10x Razberries 1x Incense 1x Lucky Egg 1x Incubator 1x Lure </td>
+			</tr>
+			<tr>
+				<td> 11 </td>
+				<td> 10000 </td>
+				<td> 15x Pokeballs 10x Potions 3x Revives 3x Razberries </td>
+			</tr>
+			<tr>
+				<td> 12 </td>
+				<td> 10000 </td>
+				<td> 20x Greatballs 10x Potions 3x Revives 3x Razberries </td>
+			</tr>
+			<tr>
+				<td> 13 </td>
+				<td> 10000 </td>
+				<td> 15x Greatballs 10x Potions 3x Revives 3x Razberries </td>
+			</tr>
+			<tr>
+				<td> 14 </td>
+				<td> 10000 </td>
+				<td> 15x Greatballs 10x Potions 3x Revives 3x Razberries </td>
+			</tr>
+			<tr>
+				<td> 15 </td>
+				<td> 15000 </td>
+				<td> 15x Greatballs 20x Hyper Potions 10x Revives 10x Razberries 1x Incense 1x Lucky Egg 1x Incubator 1x Lure </td>
+			</tr>
+			<tr>
+				<td> 16 </td>
+				<td> 20000 </td>
+				<td> 10x Greatballs 10x Hyper Potions 5x Revives 5x Razberries </td>
+			</tr>
+			<tr>
+				<td> 17 </td>
+				<td> 20000 </td>
+				<td> 10x Greatballs 10x Hyper Potions 5x Revives 5x Razberries </td>
+			</tr>
+			<tr>
+				<td> 18 </td>
+				<td> 20000 </td>
+				<td> 10x Greatballs 10x Hyper Potions 5x Revives 5x Razberries </td>
+			</tr>
+			<tr>
+				<td> 19 </td>
+				<td> 25000 </td>
+				<td> 15x Greatballs 10x Hyper Potions 5x Revives 5x Razberries </td>
+			</tr>
+			<tr>
+				<td> 20 </td>
+				<td> 25000 </td>
+				<td> 20x Ultraballs 20x Hyper Potions 20x Revives 20x Razberries 2x Incenses 2x Lucky Eggs 2x Incubators 2x Lures </td>
+			</tr>
+			<tr>
+				<td> 21 </td>
+				<td> 50000 </td>
+				<td> 10x Ultraballs 10x Hyper Potions 10x Revives 10x Razberries </td>
+			</tr>
+			<tr>
+				<td> 22 </td>
+				<td> 75000 </td>
+				<td> 10x Ultraballs 10x Hyper Potions 10x Revives 10x Razberries </td>
+			</tr>
+			<tr>
+				<td> 23 </td>
+				<td> 100000 </td>
+				<td> 10x Ultraballs 10x Hyper Potions 10x Revives 10x Razberries </td>
+			</tr>
+			<tr>
+				<td> 24 </td>
+				<td> 125000 </td>
+				<td> 15x Ultraballs 10x Hyper Potions 10x Revives 10x Razberries </td>
+			</tr>
+			<tr>
+				<td> 25 </td>
+				<td> 150000 </td>
+				<td> 25x Ultraballs 20x Max Potions 15x Revives 15x Razberries 1x Incense 1x Lucky Egg 1x Incubator 1x Lure</td>
+			</tr>
+			<tr>
+				<td> 26 </td>
+				<td> 190000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Revives 15x Razberries </td>
+			</tr>
+			<tr>
+				<td> 27 </td>
+				<td> 200000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Revives 15x Razberries </td>
+			</tr>
+			<tr>
+				<td> 28 </td>
+				<td> 250000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Revives 15x Razberries </td>
+			</tr>
+			<tr>
+				<td> 29 </td>
+				<td> 300000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Revives 15x Razberries </td>
+			</tr>
+			<tr>
+				<td> 30 </td>
+				<td> 350000 </td>
+				<td> 30x Ultraballs 20x Max Potions 20x Max Revives 20x Razberries 3x Incenses 3x Lucky Eggs 3x Incubators 3x Lures </td>
+			</tr>
+			<tr>
+				<td> 31 </td>
+				<td> 500000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Max Revives 15x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 32 </td>
+				<td> 500000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Max Revives 15x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 33 </td>
+				<td> 750000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Max Revives 15x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 34 </td>
+				<td> 1000000 </td>
+				<td> 10x Ultraballs 15x Max Potions 10x Max Revives 15x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 35 </td>
+				<td> 1250000 </td>
+				<td> 30x Ultraballs 20x Max Potions 20x Max Revives 20x Razberries 2x Incenses 1x Lucky Egg 1x Incubator 1x Lure </td>
+			</tr>
+			<tr>
+				<td> 36 </td>
+				<td> 1500000 </td>
+				<td> 20x Ultraballs 20x Max Potions 10x Max Revives 20x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 37 </td>
+				<td> 2000000 </td>
+				<td> 20x Ultraballs 20x Max Potions 10x Max Revives 20x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 38 </td>
+				<td> 2500000 </td>
+				<td> 20x Ultraballs 20x Max Potions 10x Max Revives 20x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 39 </td>
+				<td> 3000000 </td>
+				<td> 20x Ultraballs 20x Max Potions 10x Max Revives 20x Razberries  </td>
+			</tr>
+			<tr>
+				<td> 40 </td>
+				<td> 5000000 </td>
+				<td> 40x Ultraballs 40x Max Potions 40x Max Revives 40x Razberries 4x Incenses 4x Lucky Eggs 4x Incubators 4x Lures </td>
+			</tr>
+		</table>
+	
+		<p class = "infos">
+			<b> Sources: </b> <br />
+			<ul>
+				<li> <a target="_blank" href = "http://www.imore.com/pokemon-go"> www.imore.com </a> </li>
+				<li> <a target="_blank" href = "https://www.google.com/search?q=pokemon+go+gym&espv=2&biw=1396&bih=668&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiP_fifzoHRAhUQfiYKHU-NCGoQ_AUIBigB#tbm=isch&q=pokemon+go+trainer&imgrc=mX-7HZWn2lVskM%3A"> www.google.com </a> </li>
+				<li> <a target="_blank" href = "http://pokemongohub.net/pokemon-go-leveling-speed-calculator/"> www.pokemongohub.net </a> </li>
+				<li> <a target="_blank" href = "http://www.pokeaccountbuy.com/news/63--pokemon-go-level-up-guide-how-many-xp-points-it-will-take-to-reach-level-3940"> www.pokeaccountbuy.com </a> </li>
+			</ul>
+		</p>
+		
+	</body>
+	
+</html>
+

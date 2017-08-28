@@ -1,0 +1,22 @@
+
+img#icon
+{
+	width: 60%;
+	margin-top: 50px;
+	margin-left: 20%;
+}
+
+p.info
+{
+	padding-top: 50px;
+	text-align: justify;
+	font-family: Impact, Charcoal, sans-serif;
+	font-size: 18pt;
+}
+
+p#credits
+{
+	padding-top: 5px;
+	font-size: 5pt;
+	font-style: italic;
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!-- Creator: Justin Yau  -->
+<html>
+
+	<head>
+		<title> Pokemon Infoo - Appraisal</title>
+		
+		<link rel = "stylesheet" href = "../styles/pkmgo.css" />		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="https://boost-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/PokeBall.png" />
+		
+		<link rel = "stylesheet" href = "../styles/appraisal.css" />
+		<link rel = "stylesheet" href = "../styles/game.css" />
+		
+		<style> 
+		
+		</style>
+
+		<script>
+		
+			function initialize() 
+			{
+				createVariables();
+				getElements();
+			}
+			
+			function createVariables()
+			{
+				//NO CHANGE
+				Candela = 1; Blanche = 2; Spark = 3;
+				//CHANGE
+				s1 = s2 = s3 = s4 = "";
+			}
+			
+			function getElements()
+			{
+				//Gets selection drop down boxes
+				jleader = document.getElementById("sleader");
+				jfcom = document.getElementById("sfcom");
+				jscom = document.getElementById("sscom");
+				jtcom = document.getElementById("stcom");
+				//Gets the option that is to be disabled
+				jnleader = document.getElementById("nleader");
+				//Gets button that is to be enabled when all select boxes are selected
+				jbtn = document.getElementById("submitbtn");
+				//Gets result spans 
+				jr1 = document.getElementById("r1");
+				jr2 = document.getElementById("r2");
+				jr3 = document.getElementById("r3");
+			}
+			
+			function chosenL()
+			{
+				leader = jleader.value;
+				if(leader == "Candela")
+				{
+					//First Select Box
+					jfcom.disabled = false;
+					jfcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] looks like it can really battle with the best of them!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is really strong!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is pretty decent!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] has room for improvement as far as battling goes.";
+					jfcom.add(option);
+					//Second Select Box
+					jscom.disabled = false;
+					jscom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats are the best I’ve ever seen! No doubt about it!";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats are really strong! Impressive.";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "It’s definitely got some good stats. Definitely!";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats are all right, but kinda basic, as far as I can see.";
+					jscom.add(option);
+					//Third Select Box
+					jtcom.disabled = false;
+					jtcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Wh-whoa. That’s the tiniest [Pokemon Name] I’ve ever seen!";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is a little small for its kind, don’t you think?";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is a BIG one!";
+					jtcom.add(option);			
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is just HUGE!";
+					jtcom.add(option);						
+				}
+				if(leader == "Blanche")
+				{
+					//First Select Box
+					jfcom.disabled = false;
+					jfcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is a wonder! What a breathtaking Pokemon!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] has certainly caught my attention.";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is above average.";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is not likely to make much headway in battle.";
+					jfcom.add(option);
+					//Second Select Box
+					jscom.disabled = false;
+					jscom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats exceed my calculations. It’s incredible!";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "I am certainly impressed by its stats, I must say.";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats are noticeably trending to the positive.";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats are not out of the norm, in my opinion.";
+					jscom.add(option);
+					//Third Select Box
+					jtcom.disabled = false;
+					jtcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is tinier than any we have on record. Astounding.";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is below average in size.";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is above average in size.";
+					jtcom.add(option);			
+					var option = document.createElement("option");
+					option.text = "The size of your [Pokemon Name] is… colossal. This is indeed exceptional. Fascinating!";
+					jtcom.add(option);						
+				}
+				if(leader == "Spark")
+				{
+					//First Select Box
+					jfcom.disabled = false;
+					jfcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your (Pokemon Name) simply amazes me. It can accomplish anything!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is a strong Pokemon. You should be proud!";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] is a decent Pokemon";
+					jfcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Overall, your [Pokemon Name] may not be great in battle, but I still like it!";
+					jfcom.add(option);
+					//Second Select Box
+					jscom.disabled = false;
+					jscom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "I’m blown away by its stats. WOW!";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "It’s got excellent stats! How exciting!";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats indicate that in battle, it’ll get the job done.";
+					jscom.add(option);
+					var option = document.createElement("option");
+					option.text = "Its stats don’t point to greatness in battle.";
+					jscom.add(option);
+					//Third Select Box
+					jtcom.disabled = false;
+					jtcom.options.length = 0;
+					var option = document.createElement("option");
+					option.text = "-";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is so tiny, I almost didn’t notice it!";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Aww, what a small [Pokemon Name]! It’s rather cute, I’d say.";
+					jtcom.add(option);
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is rather sizable, that’s for sure!";
+					jtcom.add(option);			
+					var option = document.createElement("option");
+					option.text = "Your [Pokemon Name] is gigantic—the largest I’ve ever seen!";
+					jtcom.add(option);				
+				}
+				jnleader.disabled = true;
+			}
+			
+			function enableBTN()
+			{
+				s1 = jleader.value;
+				s2 = jfcom.value;
+				s3 = jscom.value;
+				s4 = jtcom.value;
+				if(s1 != "-" && s2 != "-" && s3 != "-" && s4 != "-")
+				{
+					jbtn.disabled = false;
+				}
+			}
+			
+			function updateInfo()
+			{
+				//Gets value of the select boxes
+				s2 = jfcom.value;
+				s3 = jscom.value;
+				s4 = jtcom.value;
+				//Gives the right advice based on values
+				//First Select Box
+				if(s2 == "Overall, your [Pokemon Name] is a wonder! What a breathtaking Pokemon!")
+				{
+					jr1.innerHTML = "IV Range: 82.2%-100%";
+				}
+				if(s2 == "Overall, your [Pokemon Name] looks like it can really battle with the best of them!")
+				{
+					jr1.innerHTML = "IV Range: 82.2%-100%";
+				}
+				if(s2 == "Overall, your (Pokemon Name) simply amazes me. It can accomplish anything!")
+				{
+					jr1.innerHTML = "IV Range: 82.2%-100%";
+				}
+				if(s2 == "Overall, your [Pokemon Name] has certainly caught my attention.")
+				{
+					jr1.innerHTML = "IV Range: 66.7% – 80%";
+				}			
+				if(s2 == "Overall, your [Pokemon Name] is really strong!")
+				{
+					jr1.innerHTML = "IV Range: 66.7% – 80%";
+				}	
+				if(s2 == "Overall, your [Pokemon Name] is a strong Pokemon. You should be proud!")
+				{
+					jr1.innerHTML = "IV Range: 66.7% – 80%";
+				}	
+				if(s2 == "Overall, your [Pokemon Name] is above average.")
+				{
+					jr1.innerHTML = "IV Range: 51.1% – 64.4%";
+				}		
+				if(s2 == "Overall, your [Pokemon Name] is pretty decent!")
+				{
+					jr1.innerHTML = "IV Range: 51.1% – 64.4%";
+				}	
+				if(s2 == "Overall, your [Pokemon Name] is a decent Pokemon")
+				{
+					jr1.innerHTML = "IV Range: 51.1% – 64.4%";
+				}		
+				if(s2 == "Overall, your [Pokemon Name] is not likely to make much headway in battle.")
+				{
+					jr1.innerHTML = "IV Range:	0% – 48.9%";
+				}
+				if(s2 == "Overall, your [Pokemon Name] has room for improvement as far as battling goes.")
+				{
+					jr1.innerHTML = "IV Range:	0% – 48.9%";
+				}		
+				if(s2 == "Overall, your [Pokemon Name] may not be great in battle, but I still like it!")
+				{
+					jr1.innerHTML = "IV Range:	0% – 48.9%";
+				}
+				//Second Select Box
+				if(s3 == "Its stats exceed my calculations. It’s incredible!")
+				{
+					jr2.innerHTML = "Stat bonus of 15";
+				}
+				if(s3 == "Its stats are the best I’ve ever seen! No doubt about it!")
+				{
+					jr2.innerHTML = "Stat bonus of 15";
+				}
+				if(s3 == "I’m blown away by its stats. WOW!")
+				{
+					jr2.innerHTML = "Stat bonus of 15";
+				}
+				if(s3 == "I am certainly impressed by its stats, I must say.")
+				{
+					jr2.innerHTML = "Stat bonus of 13 – 14";
+				}
+				if(s3 == "Its stats are really strong! Impressive.")
+				{
+					jr2.innerHTML = "Stat bonus of 13 – 14";
+				}
+				if(s3 == "It’s got excellent stats! How exciting!")
+				{
+					jr2.innerHTML = "Stat bonus of 13 – 14";
+				}
+				if(s3 == "Its stats are noticeably trending to the positive.")
+				{
+					jr2.innerHTML = "Stat bonus of 8 – 12";
+				}
+				if(s3 == "It’s definitely got some good stats. Definitely!")
+				{
+					jr2.innerHTML = "Stat bonus of 8 – 12";
+				}
+				if(s3 == "Its stats indicate that in battle, it’ll get the job done.")
+				{
+					jr2.innerHTML = "Stat bonus of 8 – 12";
+				}
+				if(s3 == "Its stats are not out of the norm, in my opinion.")
+				{
+					jr2.innerHTML = "Stat bonus of 0 – 7";
+				}
+				if(s3 == "Its stats are all right, but kinda basic, as far as I can see.")
+				{
+					jr2.innerHTML = "Stat bonus of 0 – 7";
+				}
+				if(s3 == "Its stats don’t point to greatness in battle.")
+				{
+					jr2.innerHTML = "Stat bonus of 0 – 7";
+				}
+				//Third Select Box
+				if(s4 == "Your [Pokemon Name] is tinier than any we have on record. Astounding.")
+				{
+					jr3.innerHTML = "XS";
+				}
+				if(s4 == "Wh-whoa. That’s the tiniest [Pokemon Name] I’ve ever seen!")
+				{
+					jr3.innerHTML = "XS";
+				}
+				if(s4 == "Your [Pokemon Name] is so tiny, I almost didn’t notice it!")
+				{
+					jr3.innerHTML = "XS";
+				}
+				if(s4 == "Your [Pokemon Name] is below average in size.")
+				{
+					jr3.innerHTML = "Small";
+				}
+				if(s4 == "Your [Pokemon Name] is a little small for its kind, don’t you think?")
+				{
+					jr3.innerHTML = "Small";
+				}
+				if(s4 == "Aww, what a small [Pokemon Name]! It’s rather cute, I’d say.")
+				{
+					jr3.innerHTML = "Small";
+				}
+				if(s4 == "Your [Pokemon Name] is above average in size.")
+				{
+					jr3.innerHTML = "Large";
+				}
+				if(s4 == "Your [Pokemon Name] is rather sizable, that’s for sure!")
+				{
+					jr3.innerHTML = "Large";
+				}
+				if(s4 == "Your [Pokemon Name] is a BIG one!")
+				{
+					jr3.innerHTML = "Large";
+				}
+				if(s4 == "The size of your [Pokemon Name] is… colossal. This is indeed exceptional. Fascinating!")
+				{
+					jr3.innerHTML = "XL";
+				}
+				if(s4 == "Your [Pokemon Name] is just HUGE!")
+				{
+					jr3.innerHTML = "XL";
+				}
+				if(s4 == "Your [Pokemon Name] is gigantic—the largest I’ve ever seen!")
+				{
+					jr3.innerHTML = "XL";
+				}
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize();">
+
+		<img src = "../images/bgrnd.jpg" id = "bgrnd" />
+		
+		<div id = "alert">
+			<marquee id = "amsg" DIRECTION=RIGHT > Welcome to Pokemon Go Infoo! </marquee>	
+		</div>
+		
+		<div id = "logodiv">
+			<img src = "../images/logo.png" id = "logo" />
+		</div>
+		
+		<div class = "menu">
+			<ul>
+				<!-- Home Icon -->
+				<li>
+					<a href = "../index.html" class = "menusec"> 
+						<i class="fa fa-home"></i>
+					</a>
+				</li>
+				<!-- Game Info -->
+				<li> 
+					GAME INFO
+					<ul>
+						<li> 
+							<a href="beginning.html" class = "menusec">Beginning</a>
+						</li>
+						<li>
+							<a href="gym.html" class = "menusec">Gyms</a>
+						</li>
+						<li>
+							<a href="pstop.html" class = "menusec">Pokestops</a>
+						</li>
+						<li id = "special">
+							<a href ="trainer.html" class = "menusec">Trainers</a>
+						</li>
+					</ul>
+				</li>
+				<!-- POKEMON INFO -->
+				<li> 
+					POKEMON
+					<ul>
+						<li>
+							<a href = "appraisal.html" class = "menusec"> Appraisal </a>
+						</li>
+						<li>
+							<a href = "pokedex.html" class = "menusec"> Pokedex </a>
+						</li> 
+						<li>
+							<a href = "mcp.html" class = "menusec">Max CP</a>
+						</li>
+						<li>
+							<a href="crate.html" class = "menusec">Catch Rates</a>
+						</li>
+						<li> 
+							<a href = "egg.html" class = "menusec">Eggs</a>
+						</li> 
+						<li>
+							<a href = "tracker.html" class = "menusec">Tracker</a>
+						</li>
+					</ul>
+				</li> 
+			</ul>
+		</div>
+		
+		<img src = "../images/leader.jpg" id = "leader" />
+		
+		<div id = "bg">
+			<p class = "infohead">
+				What does your Leader's Appraisal mean?
+			</p>
+		</div>
+		
+		<p class = "info1">
+			Select your team and what your leader said below to find out! 
+		</p>
+			
+		<p class = "info1"> 
+			Team Leader:
+			<select id = "sleader" onchange = "chosenL();enableBTN();">
+				<option value = "" id = "nleader"> - </option>
+				<option value = "Candela"> Candela (Valor) </option>
+				<option value = "Blanche"> Blanche (Mystic) </option>
+				<option value = "Spark"> Spark (Instinct)</option>
+			</select>
+			<br />
+			Overall Stat Analysis
+			<select id = "sfcom" disabled = "disabled" onchange = "enableBTN();">
+				<option value = "" id = "f1"> Pick your team leader first! </option>
+			</select>
+			<br />
+			Individual Stat Analysis
+			<select id = "sscom" disabled = "disabled" onchange = "enableBTN();">
+				<option value = "" id = "s1"> Pick your team leader first! </option>
+			</select>
+			<br />
+			Pokemon Size
+			<select id = "stcom" disabled = "disabled" onchange = "enableBTN();">
+				<option value = "" id = "t1"> Pick your team leader first! </option>
+			</select>
+			<br />
+			<button id = "submitbtn" disabled = "disabled" onclick = "updateInfo();"> Submit </button>
+		</p>
+			
+		<div id = "bg">
+			<p class = "infohead">
+				Results
+			</p>
+		</div>
+		
+		<p class = "info1">
+			Based on what you selected, your Pokemon's Analysis can be found below: <br />
+			Overall Stat Analysis: <span id = "r1"> N/A </span> <br />
+			Individual Stat Analysis: <span id = "r2"> N/A </span> <br />
+			Pokemon Size Analysis: <span id = "r3"> N/A </span>
+		</p>
+				
+		<p class = "infos">
+			<b> Sources: </b> <br />
+			<ul>
+				<li> <a target="_blank" href = "https://www.google.com/search?q=pokemon+go+leaders&espv=2&biw=1396&bih=668&source=lnms&tbm=isch&sa=X&ved=0ahUKEwie1aGb94PRAhWmslQKHZc5C2QQ_AUIBigB#imgrc=4eZlUAmEiEwEfM%3A"> www.google.com </a> </li>
+				<li> <a target="_blank" href = "http://pokemongohub.net/pokemon-go-appraisal-chart/#1472115098745-a365ff8d-2254"> www.pokemongohub.net </a> </li>
+			</ul>
+		</p>
+		
+	</body>
+	
+</html>
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Creator: Justin Yau  -->
+<html>
+
+	<head>
+		<title> Pokemon Infoo - Tracker </title>
+		
+		<link rel = "stylesheet" href = "../styles/pkmgo.css" />		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="https://boost-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/PokeBall.png" />
+		
+		<link rel = "stylesheet" href = "../styles/tracker.css" />
+		<link rel = "stylesheet" href = "../styles/game.css" />
+		
+		<style> 
+		
+		</style>
+
+		<script>
+		
+			function initialize() 
+			{
+				
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize();">
+
+		<img src = "../images/bgrnd.jpg" id = "bgrnd" />
+		
+		<div id = "alert">
+			<marquee id = "amsg" DIRECTION=RIGHT > Welcome to Pokemon Go Infoo! </marquee>	
+		</div>
+		
+		<div id = "logodiv">
+			<img src = "../images/logo.png" id = "logo" />
+		</div>
+		
+		<div class = "menu">
+			<ul>
+				<!-- Home Icon -->
+				<li>
+					<a href = "../index.html" class = "menusec"> 
+						<i class="fa fa-home"></i>
+					</a>
+				</li>
+				<!-- Game Info -->
+				<li> 
+					GAME INFO
+					<ul>
+						<li> 
+							<a href="beginning.html" class = "menusec">Beginning</a>
+						</li>
+						<li>
+							<a href="gym.html" class = "menusec">Gyms</a>
+						</li>
+						<li>
+							<a href="pstop.html" class = "menusec">Pokestops</a>
+						</li>
+						<li id = "special">
+							<a href ="trainer.html" class = "menusec">Trainers</a>
+						</li>
+					</ul>
+				</li>
+				<!-- POKEMON INFO -->
+				<li> 
+					POKEMON
+					<ul>
+						<li>
+							<a href = "appraisal.html" class = "menusec"> Appraisal </a>
+						</li>
+						<li>
+							<a href = "pokedex.html" class = "menusec"> Pokedex </a>
+						</li> 
+						<li>
+							<a href = "mcp.html" class = "menusec">Max CP</a>
+						</li>
+						<li>
+							<a href="crate.html" class = "menusec">Catch Rates</a>
+						</li>
+						<li> 
+							<a href = "egg.html" class = "menusec">Eggs</a>
+						</li> 
+						<li>
+							<a href = "tracker.html" class = "menusec">Tracker</a>
+						</li>
+					</ul>
+				</li> 
+			</ul>
+		</div>
+		
+		<br /> <br />
+		
+		<div id = "bg">
+			<p class = "infohead">
+				Pokemon Go Tracker
+			</p>
+		</div>
+		
+		<div id = "bg">
+			<p class = "info">
+				You can find where pokemon are in real-time using the gadget found below!
+			</p>
+		</div>
+		
+		<iframe src = "https://www.pokemap.net/" frameborder = "no" id = "tmap" />
+		
+	</body>

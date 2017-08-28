@@ -1,0 +1,43 @@
+
+img#pokedex
+{
+	padding-top: 50px;
+	width: 20%;
+	padding-left: 40%;
+}
+
+select#spokedex
+{
+	display: block;
+	margin: auto;
+	border: 1px solid blue;
+	border-radius: 5px;
+	font: 12pt Impact, Charcoal, sans-serif;
+	background-color: silver;
+}
+
+table.poke 
+{
+	display: none;
+	margin: auto;
+	border: 2px solid blue;
+	background-color: lightgray;
+	color: black;
+	font: 14pt Arial;
+}
+
+table.poke, table.poke th, table.poke td
+{
+	border-collapse: collapse;
+}
+
+table.poke tr:first-child
+{
+    background-color: darkgray;
+}
+
+table.poke th, table.poke td
+{
+	padding: 5px;
+	border: 1px solid blue;
+}

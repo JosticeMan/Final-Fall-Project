@@ -1,0 +1,54 @@
+
+p.info
+{
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font: 16pt Impact, Charcoal, sans-serif;
+	opacity: 1.0;
+	padding-bottom: 30px;
+	border: 2px solid black;
+}
+
+p.infos
+{
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	font: 16pt Impact, Charcoal, sans-serif;
+}
+
+p.infohead
+{
+	font: 24pt Impact, Charcoal, sans-serif;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	opacity: 1.0;
+	border: 2px solid black;
+}
+
+div#bg
+{
+	margin-left: 50px;
+	margin-right: 50px;
+	background: rgba(198, 217, 236, .7);
+}
+
+b
+{
+	text-decoration: underline;
+}
+
+a
+{
+	text-decoration: none;
+	color: navyblue;
+}
+
+iframe#youtubevid
+{
+	margin-left: 27%;
+	width: 560px;
+	height: 315px;
+}

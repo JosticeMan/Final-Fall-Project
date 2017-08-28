@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- Creator: Justin Yau  -->
+<html>
+
+	<head>
+		<title> Pokemon Infoo - Max CP</title>
+		
+		<link rel = "stylesheet" href = "../styles/pkmgo.css" />		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="https://boost-rankedboost.netdna-ssl.com/wp-content/uploads/2016/07/PokeBall.png" />
+		
+		<link rel = "stylesheet" href = "../styles/mcp.css" />
+		<link rel = "stylesheet" href = "../styles/game.css" />
+		
+		<style> 
+		
+		</style>
+
+		<script>
+		
+			function initialize() 
+			{
+				createVariables();
+				getElements();
+				updateInfo();
+			}
+			
+			function createVariables()
+			{
+				//Max CP Values stored into Pokemon Names (Formulas to calculate these values were not released)
+				Bulbasaur = 981;
+				Ivysaur = 1552;
+				Venusaur = 2568;
+				Charmander = 831;
+				Charmeleon = 1484;
+				Charizard = 2686;
+				Squirtle = 808;
+				Wartortle = 1324;
+				Blastoise = 2291;
+				Caterpie = 393;
+				Metapod = 357;
+				Butterfree = 1701;
+				Weedle = 397;
+				Kakuna = 392;
+				Beedrill = 177;
+				Pidgey = 580;
+				Pidgeotto = 1085;
+				Pidgeot = 1994;
+				Rattata = 588;
+				Raticate = 1549;
+				Spearow = 673;
+				Fearow = 1814;
+				Ekans = 778;
+				Arbok = 1737;
+				Pikachu = 787;
+				Raichu = 2015;
+				Sandshrew = 1194;
+				Sandslash = 2328;
+				NidoranF = 736;
+				Nidorina = 1218;
+				Nidoqueen = 2338;
+				NidoranM = 739;
+				Nidorino = 1252;
+				Nidoking = 2386;
+				Clefairy = 1085;
+				Clefable = 2353;
+				Vulpix = 774;
+				Ninetales = 2157;
+				Jigglypuff = 713;
+				Wigglytuff = 1906;
+				Zubat = 569;
+				Golbat = 1830;
+				Oddish = 1069;
+				Gloom = 1512;
+				Vileplume = 2367;
+				Paras = 836;
+				Parasect = 1657;
+				Venonat = 902;
+				Venomoth = 1937;
+				Diglett = 465;
+				Dugtrio = 1333;
+				Meowth = 638;
+				Persian = 1539;
+				Psyduck = 966;
+				Golduck = 2270;
+				Mankey = 1002;
+				Primeape = 2105;
+				Growlithe = 1110;
+				Arcanine = 2839;
+				Poliwag = 695;
+				Poliwhirl = 1313;
+				Poliwrath = 2441;
+				Abra = 1148;
+				Kadabra = 1859;
+				Alakazam = 2887;
+				Machop = 1199;
+				Machoke = 1910;
+				Machamp = 2889;
+				Bellsprout = 916;
+				Weepinbell = 1475;
+				Victreebel = 2268;
+				Tentacool = 956;
+				Tentacruel = 2374;
+				Geodude = 1193;
+				Graveler = 1815;
+				Golem = 2916;
+				Ponyta = 1502;
+				Rapidash = 2252;
+				Slowpoke = 1204;
+				Slowbro = 2482;
+				Magnemite = 1083;
+				Magneton = 2237;
+				Farfetch = 1092;
+				Doduo = 1011;
+				Dodrio = 2138;
+				Seel = 899;
+				Dewgong = 194;
+				Grimer = 1269;
+				Muk = 2709;
+				Shellder = 958;
+				Cloyster = 2475;
+				Gastly = 1002;
+				Haunter = 1716;
+				Gengar = 2619;
+				Onix = 1002;
+				Drowzee = 992;
+				Hypno = 2048;
+				Krabby = 1386;
+				Kingler = 2694;
+				Voltorb = 857;
+				Electrode = 1900;
+				Exeggcute = 1102;
+				Exeggutor = 2916;
+				Cubone = 943;
+				Marowak = 1691;
+				Hitmonlee = 2406;
+				Hitmonchan = 2098;
+				Lickitung = 1322;
+				Koffing = 1091;
+				Weezing = 2183;
+				Rhyhorn = 1679;
+				Rhydon = 3300;
+				Chansey = 1469;
+				Tangela = 2208; 
+				Kangaskhan = 2463;
+				Horsea = 921;
+				Seadra = 1979;
+				Goldeen = 1006;
+				Seaking = 2040;
+				Staryu = 926;
+				Starmie = 2303;
+				MrMime = 1984;
+				Scyther = 2464;
+				Jynx = 2512;
+				Electabuzz = 2196;
+				Magmar = 2254;
+				Pinsir = 2770;
+				Tauros = 2488;
+				Magikarp = 220;
+				Gyarados = 3281;
+				Lapras = 2980;
+				Ditto = 718;
+				Eevee = 969;
+				Vaporeon = 3157;
+				Jolteon = 2730;
+				Flareon = 2904;
+				Porygon = 1567;
+				Omanyte = 1345;
+				Omastar = 2685;
+				Kabuto = 1172;
+				Kabutops = 2517;
+				Aerodactyl = 2608;
+				Snorlax = 3355;
+				Articuno = 2933;
+				Zapdos = 3330;
+				Moltres = 3272;
+				Dratini = 860;
+				Dragonair = 1609;
+				Dragonite = 3581;
+				Mewtwo = 4760;
+				Mew = 3090;
+			}
+			
+			function getElements()
+			{
+				cpimg = document.getElementById("maxcpimg");
+				cppoke = document.getElementById("maxcppoke");
+				cpv = document.getElementById("cpval");
+				schoice = document.getElementById("pokemonlist");
+			}
+			
+			function updateInfo()
+			{
+				var userchoice = schoice.value;
+				cpimg.src = "../images/Pokemon/" + userchoice + ".png";
+				cppoke.innerHTML = userchoice;
+				var cvalue = window[userchoice] * 1;
+				cpv.innerHTML = cvalue;
+			}
+			
+		</script>
+	</head>
+	
+	<body onload = "initialize();">
+
+		<img src = "../images/bgrnd.jpg" id = "bgrnd" class = "spec"/>
+		
+		<div id = "alert">
+			<marquee id = "amsg" DIRECTION=RIGHT > Welcome to Pokemon Go Infoo! </marquee>	
+		</div>
+		
+		<div id = "logodiv">
+			<img src = "../images/logo.png" id = "logo" class = "spec"/>
+		</div>
+		
+		<div class = "menu">
+			<ul>
+				<!-- Home Icon -->
+				<li>
+					<a href = "../index.html" class = "menusec"> 
+						<i class="fa fa-home"></i>
+					</a>
+				</li>
+				<!-- Game Info -->
+				<li> 
+					GAME INFO
+					<ul>
+						<li> 
+							<a href="beginning.html" class = "menusec">Beginning</a>
+						</li>
+						<li>
+							<a href="gym.html" class = "menusec">Gyms</a>
+						</li>
+						<li>
+							<a href="pstop.html" class = "menusec">Pokestops</a>
+						</li>
+						<li id = "special">
+							<a href ="trainer.html" class = "menusec">Trainers</a>
+						</li>
+					</ul>
+				</li>
+				<!-- POKEMON INFO -->
+				<li> 
+					POKEMON
+					<ul>
+						<li>
+							<a href = "appraisal.html" class = "menusec"> Appraisal </a>
+						</li>
+						<li>
+							<a href = "pokedex.html" class = "menusec"> Pokedex </a>
+						</li> 
+						<li>
+							<a href = "mcp.html" class = "menusec">Max CP</a>
+						</li>
+						<li>
+							<a href="crate.html" class = "menusec">Catch Rates</a>
+						</li>
+						<li> 
+							<a href = "egg.html" class = "menusec">Eggs</a>
+						</li> 
+						<li>
+							<a href = "tracker.html" class = "menusec">Tracker</a>
+						</li>
+					</ul>
+				</li> 
+			</ul>
+		</div>
+		
+		<img src = "../images/maxcp.jpg" id = "maxcp" class = "spec"/>
+		
+		<div id = "bg">
+			<p class = "infohead">
+				Maximum CP Calculator
+			</p>
+		</div>	
+		
+		<div id = "bg">
+			<p class = "info">
+				Select what pokemon you would like to find the Maximum CP for below: 
+			</p>
+		</div>
+		
+		<select id = "pokemonlist">
+			<option value="Bulbasaur"> Bulbasaur </option>
+			<option value="Ivysaur"> Ivysaur </option>
+			<option value="Venusaur"> Venusaur </option>
+			<option value="Charmander"> Charmander </option>
+			<option value="Charmeleon"> Charmeleon </option>
+			<option value="Charizard"> Charizard </option>
+			<option value="Squirtle"> Squirtle </option>
+			<option value="Wartortle"> Wartortle </option>
+			<option value="Blastoise"> Blastoise </option>
+			<option value="Caterpie"> Caterpie </option>
+			<option value="Metapod"> Metapod </option>
+			<option value="Butterfree"> Butterfree </option>
+			<option value="Weedle"> Weedle </option>
+			<option value="Kakuna"> Kakuna </option>
+			<option value="Beedrill"> Beedrill </option>
+			<option value="Pidgey"> Pidgey </option>
+			<option value="Pidgeotto"> Pidgeotto </option>
+			<option value="Pidgeot"> Pidgeot </option>
+			<option value="Rattata"> Rattata </option>
+			<option value="Raticate"> Raticate </option>
+			<option value="Spearow"> Spearow </option>
+			<option value="Fearow"> Fearow </option>
+			<option value="Ekans"> Ekans </option>
+			<option value="Arbok"> Arbok </option>
+			<option value="Pikachu"> Pikachu </option>
+			<option value="Raichu"> Raichu </option>
+			<option value="Sandshrew"> Sandshrew </option>
+			<option value="Sandslash"> Sandslash </option>
+			<option value="NidoranF"> NidoranF </option>
+			<option value="Nidorina"> Nidorina </option>
+			<option value="Nidoqueen"> Nidoqueen </option>
+			<option value="NidoranM"> NidoranM </option>
+			<option value="Nidorino"> Nidorino </option>
+			<option value="Nidoking"> Nidoking </option>
+			<option value="Clefairy"> Clefairy </option>
+			<option value="Clefable"> Clefable </option>
+			<option value="Vulpix"> Vulpix </option>
+			<option value="Ninetales"> Ninetales </option>
+			<option value="Jigglypuff"> Jigglypuff </option>
+			<option value="Wigglytuff"> Wigglytuff </option>
+			<option value="Zubat"> Zubat </option>
+			<option value="Golbat"> Golbat </option>
+			<option value="Oddish"> Oddish </option>
+			<option value="Gloom"> Gloom </option>
+			<option value="Vileplume"> Vileplume </option>
+			<option value="Paras"> Paras </option>
+			<option value="Parasect"> Parasect </option>
+			<option value="Venonat"> Venonat </option>
+			<option value="Venomoth"> Venomoth </option>
+			<option value="Diglett"> Diglett </option>
+			<option value="Dugtrio"> Dugtrio </option>
+			<option value="Meowth"> Meowth </option>
+			<option value="Persian"> Persian </option>
+			<option value="Psyduck"> Psyduck </option>
+			<option value="Golduck"> Golduck </option>
+			<option value="Mankey"> Mankey </option>
+			<option value="Primeape"> Primeape </option>
+			<option value="Growlithe"> Growlithe </option>
+			<option value="Arcanine"> Arcanine </option>
+			<option value="Poliwag"> Poliwag </option>
+			<option value="Poliwhirl"> Poliwhirl </option>
+			<option value="Poliwrath"> Poliwrath </option>
+			<option value="Abra"> Abra </option>
+			<option value="Kadabra"> Kadabra </option>
+			<option value="Alakazam"> Alakazam </option>
+			<option value="Machop"> Machop </option>
+			<option value="Machoke"> Machoke </option>
+			<option value="Machamp"> Machamp </option>
+			<option value="Bellsprout"> Bellsprout </option>
+			<option value="Weepinbell"> Weepinbell </option>
+			<option value="Victreebel"> Victreebel </option>
+			<option value="Tentacool">  Tentacool </option>
+			<option value="Tentacruel"> Tentacruel </option>
+			<option value="Geodude"> Geodude </option>
+			<option value="Graveler"> Graveler </option>
+			<option value="Golem"> Golem </option>
+			<option value="Ponyta"> Ponyta </option>
+			<option value="Rapidash"> Rapidash </option>
+			<option value="Slowpoke"> Slowpoke </option>
+			<option value="Slowbro"> Slowbro </option>
+			<option value="Magnemite"> Magnemite </option>
+			<option value ="Magneton"> Magneton </option>
+			<option value="Farfetch"> Farfetch </option>
+			<option value="Doduo"> Doduo </option>
+			<option value="Dodrio"> Dodrio </option>
+			<option value="Seel"> Seel </option>
+			<option value="Dewgong"> Dewgong </option>
+			<option value="Grimer"> Grimer </option>
+			<option value="Muk"> Muk </option>
+			<option value="Shellder"> Shellder </option>
+			<option value="Cloyster"> Cloyster </option>
+			<option value="Gastly"> Gastly </option>
+			<option value="Haunter"> Haunter </option>
+			<option value="Gengar"> Gengar </option>
+			<option value="Onix"> Onix </option>
+			<option value="Drowzee"> Drowzee </option>
+			<option value="Hypno"> Hypno </option>
+			<option value="Krabby"> Krabby </option>
+			<option value="Kingler"> Kingler </option>
+			<option value="Voltorb"> Voltorb </option>
+			<option value="Electrode"> Electrode </option>
+			<option value="Exeggcute"> Exeggcute </option>
+			<option value="Exeggutor"> Exeggutor </option>
+			<option value="Cubone"> Cubone </option>
+			<option value="Marowak"> Marowak </option>
+			<option value="Hitmonlee"> Hitmonlee </option>
+			<option value="Hitmonchan"> Hitmonchan </option>
+			<option value="Lickitung"> Lickitung </option>
+			<option value="Koffing"> Koffing </option>
+			<option value="Weezing"> Weezing </option>
+			<option value="Rhyhorn"> Rhyhorn </option>
+			<option value="Rhydon"> Rhydon </option>
+			<option value="Chansey"> Chansey </option>
+			<option value="Tangela"> Tangela </option>
+			<option value="Kangaskhan"> Kangaskhan </option>
+			<option value="Horsea"> Horsea </option>
+			<option value="Seadra"> Seadra </option>
+			<option value="Goldeen"> Goldeen </option>
+			<option value="Seaking"> Seaking </option>
+			<option value="Staryu"> Staryu </option>
+			<option value="Starmie"> Starmie </option>
+			<option value="MrMime"> MrMime </option>
+			<option value="Scyther"> Scyther </option>
+			<option value="Jynx"> Jynx </option>
+			<option value="Electabuzz"> Electabuzz </option>
+			<option value="Magmar"> Magmar </option>
+			<option value="Pinsir"> Pinsir </option>
+			<option value="Tauros"> Tauros </option>
+			<option value="Magikarp"> Magikarp </option>
+			<option value="Gyarados"> Gyarados </option>
+			<option value="Lapras"> Lapras </option>
+			<option value="Ditto"> Ditto </option>
+			<option value="Eevee"> Eevee </option>
+			<option value="Vaporeon"> Vaporeon </option>
+			<option value="Jolteon"> Jolteon </option>
+			<option value="Flareon"> Flareon </option>
+			<option value="Porygon"> Porygon </option>
+			<option value="Omanyte"> Omanyte </option>
+			<option value="Omastar"> Omastar </option>
+			<option value="Kabuto"> Kabuto </option>
+			<option value="Kabutops"> Kabutops </option>
+			<option value="Aerodactyl"> Aerodactyl </option>
+			<option value="Snorlax"> Snorlax </option>
+			<option value="Articuno"> Articuno </option>
+			<option value="Zapdos"> Zapdos </option>
+			<option value="Moltres"> Moltres </option>
+			<option value="Dratini"> Dratini </option>
+			<option value="Dragonair"> Dragonair </option>
+			<option value="Dragonite"> Dragonite </option>
+			<option value="Mewtwo"> Mewtwo </option>
+			<option value="Mew"> Mew </option>
+		</select>
+		
+		<br />
+		
+		<button id = "submitbtn" onclick = "updateInfo();"> Submit </button>
+		
+		<div id = "results">
+			You wanted to find the Maximum CP of : <br />
+			<img src = "" id = "maxcpimg" /> <br />
+			<span id = "maxcppoke"> None Selected </span> <br />
+			<br />
+			Max CP (At Level 40): <span id = "cpval"> N/A </span> 
+		</div>
+		
+		<p class = "infos">
+			<b> Sources: </b> <br />
+			<ul>
+				<li> <a target="_blank" href = "https://www.google.com/search?q=max+cp+in+pokemon+go&espv=2&biw=1396&bih=668&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA84Ov5ILRAhUJ6CYKHbAUCTsQ_AUICCgD#imgrc=9q0KC_YUXjhViM%3A"> www.google.com </a> </li>
+				<li> <a target="_blank" href = "http://www.pokemongodb.net/2016/05/pokemon-go-pokedex.html"> www.pokemongodb.net </a> </li>
+				<li> <a target="_blank" href = "http://pokemongohub.net/pokemon-go-new-max-cp-chart/"> www.pokemongohub.net </a> </li>
+			</ul>
+		</p>
+		
+	</body>
+	
+</html>
+

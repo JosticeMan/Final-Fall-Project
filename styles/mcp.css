@@ -1,0 +1,43 @@
+
+img#maxcp
+{
+	width: 60%;
+	padding-top: 50px;
+	padding-left: 20%;
+}
+
+select#pokemonlist
+{
+	display: block;
+	margin: auto;
+	border: 1px solid blue;
+	border-radius: 5px;
+	font: 12pt Impact, Charcoal, sans-serif;
+	background-color: silver;
+}
+
+button#submitbtn
+{
+	display: block;
+	margin: auto;
+	border: 1px solid blue;
+	border-radius: 5px;
+	font: 12pt Impact, Charcoal, sans-serif;
+	background-color: silver;	
+	cursor: pointer;
+}
+
+img#maxcpimg
+{
+	width: 10%;
+	padding-top: 10px;
+}
+
+div#results
+{
+	margin-top: 10px;
+	font: 14pt Impact, Charcoal, sans-serif;
+	text-align: center;
+}
+
+

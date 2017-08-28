@@ -1,0 +1,34 @@
+
+img#leader
+{
+	width: 40%;
+	padding-top: 50px;
+	padding-left: 30%;
+}
+
+select
+{
+	display: block;
+	margin: auto;
+	border: 1px solid blue;
+	border-radius: 5px;
+	font: 12pt Impact, Charcoal, sans-serif;
+	background-color: silver;
+}
+
+button#submitbtn
+{
+	display: block;
+	margin: auto;
+	border: 1px solid blue;
+	border-radius: 5px;
+	font: 12pt Impact, Charcoal, sans-serif;
+	background-color: silver;	
+	cursor: pointer;
+}
+
+p.info1
+{
+	font: 14pt Impact, Charcoal, sans-serif;
+	text-align: center;
+}
